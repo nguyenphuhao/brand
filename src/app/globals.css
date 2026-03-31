@@ -14,3 +14,7 @@
   --radius-btn: 8px;
   --radius-card-lg: 16px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
