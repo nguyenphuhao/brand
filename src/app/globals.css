@@ -1,1 +1,16 @@
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@theme {
+  --color-brand-primary: #0D9488;
+  --color-brand-accent: #FF6B35;
+  --color-brand-ai: #FFB347;
+  --color-brand-dark: #1A1A2E;
+  --color-brand-light: #F0FDFA;
+
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --radius-card: 12px;
+  --radius-btn: 8px;
+  --radius-card-lg: 16px;
+}
