@@ -11,6 +11,13 @@ const font = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Playnika — Brand Guidelines",
   description: "Nhịp kết nối mọi cuộc chơi. Brand identity cho Playnika — nền tảng AI kết nối cộng đồng thể thao.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
