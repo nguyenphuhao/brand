@@ -1,3 +1,4 @@
+import { Check, X } from "lucide-react";
 import { brandAdjectives } from "@/lib/brand";
 
 const dos = [
@@ -46,7 +47,7 @@ export function SectionPersonality() {
             <ul className="space-y-2">
               {dos.map((d) => (
                 <li key={d} className="flex gap-2 text-sm text-brand-dark/80">
-                  <span className="text-brand-primary shrink-0">✓</span>
+                  <Check className="w-4 h-4 text-brand-primary shrink-0" />
                   <span>&ldquo;{d}&rdquo;</span>
                 </li>
               ))}
@@ -57,7 +58,7 @@ export function SectionPersonality() {
             <ul className="space-y-2">
               {donts.map((d) => (
                 <li key={d} className="flex gap-2 text-sm text-brand-dark/80">
-                  <span className="text-red-500 shrink-0">✗</span>
+                  <X className="w-4 h-4 text-red-500 shrink-0" />
                   <span>&ldquo;{d}&rdquo;</span>
                 </li>
               ))}

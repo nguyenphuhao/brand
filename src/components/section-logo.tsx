@@ -1,11 +1,12 @@
+import { Circle, Play, Orbit, Users } from "lucide-react";
 import { Logo } from "./logo";
 import { LogoIcon } from "./logo-icon";
 
 const logoMeaning = [
-  { icon: "🏀", label: "Teal Ball", desc: "Cuộc chơi, thể thao" },
-  { icon: "▶", label: "Play", desc: "Action, bắt đầu chơi" },
-  { icon: "🪐", label: "Golden Orbit", desc: "Nika AI bao quanh, voice wave, nhịp kết nối" },
-  { icon: "●●", label: "Coral Dots", desc: "Players / community xoay quanh cuộc chơi" },
+  { Icon: Circle, label: "Teal Ball", desc: "Cuộc chơi, thể thao", color: "text-brand-primary" },
+  { Icon: Play, label: "Play", desc: "Action, bắt đầu chơi", color: "text-brand-primary" },
+  { Icon: Orbit, label: "Golden Orbit", desc: "Nika AI bao quanh, voice wave, nhịp kết nối", color: "text-brand-ai" },
+  { Icon: Users, label: "Coral Dots", desc: "Players / community xoay quanh cuộc chơi", color: "text-brand-accent" },
 ];
 
 export function SectionLogo() {
@@ -42,7 +43,7 @@ export function SectionLogo() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {logoMeaning.map((m) => (
             <div key={m.label} className="bg-white rounded-card p-4 border border-gray-100">
-              <p className="text-2xl mb-2">{m.icon}</p>
+              <m.Icon className={`w-6 h-6 mb-2 ${m.color}`} />
               <p className="font-semibold text-sm text-brand-dark">{m.label}</p>
               <p className="text-xs text-brand-dark/60 mt-1">{m.desc}</p>
             </div>
