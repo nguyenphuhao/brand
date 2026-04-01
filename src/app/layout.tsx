@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const font = Plus_Jakarta_Sans({
   subsets: ["latin", "vietnamese"],
@@ -26,8 +28,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="vi" className={font.variable}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="vi" className={font.variable} suppressHydrationWarning>
+      <body className="font-sans antialiased bg-white dark:bg-brand-dark transition-colors">
+        <ThemeProvider>
+          <ThemeToggle />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

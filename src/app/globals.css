@@ -18,3 +18,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+.dark {
+  --color-brand-dark-surface: #111122;
+  --color-brand-dark-card: #252540;
+}

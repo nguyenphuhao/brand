@@ -44,14 +44,14 @@ export function Nav() {
           className="group flex items-center gap-2"
           aria-label={s.label}
         >
-          <span className="text-xs text-brand-dark/0 group-hover:text-brand-dark/60 transition-all whitespace-nowrap">
+          <span className="text-xs text-brand-dark/0 dark:text-brand-light/0 group-hover:text-brand-dark/60 dark:group-hover:text-brand-light/60 transition-all whitespace-nowrap">
             {s.label}
           </span>
           <span
             className={`block rounded-full transition-all ${
               active === s.id
                 ? "w-3 h-3 bg-brand-primary"
-                : "w-2 h-2 bg-brand-dark/20 group-hover:bg-brand-primary/50"
+                : "w-2 h-2 bg-brand-dark/20 dark:bg-brand-light/20 group-hover:bg-brand-primary/50"
             }`}
           />
         </a>

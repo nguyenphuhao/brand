@@ -20,14 +20,14 @@ export function SectionPersonality() {
         <p className="text-xs font-semibold uppercase tracking-widest text-brand-primary mb-4">
           Brand Personality
         </p>
-        <h2 className="text-3xl font-bold text-brand-dark mb-12">
+        <h2 className="text-3xl font-bold text-brand-dark dark:text-brand-light mb-12">
           70% Community · 20% Energetic · 10% Premium
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-16">
           {brandAdjectives.map((a) => (
-            <div key={a.word} className="bg-brand-light rounded-card p-5 text-center">
+            <div key={a.word} className="bg-brand-light dark:bg-[#252540] rounded-card p-5 text-center">
               <p className="font-bold text-brand-primary text-lg">{a.word}</p>
-              <p className="text-xs text-brand-dark/60 mt-2">{a.desc}</p>
+              <p className="text-xs text-brand-dark/60 dark:text-brand-light/50 mt-2">{a.desc}</p>
             </div>
           ))}
         </div>
@@ -40,13 +40,13 @@ export function SectionPersonality() {
             và sẵn sàng giúp tổ chức mọi thứ. Không phải app &ldquo;tech lạnh&rdquo;.
           </p>
         </div>
-        <h3 className="text-xl font-bold text-brand-dark mb-6">Tone of Voice</h3>
+        <h3 className="text-xl font-bold text-brand-dark dark:text-brand-light mb-6">Tone of Voice</h3>
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <p className="font-semibold text-brand-primary mb-3">Do&apos;s</p>
             <ul className="space-y-2">
               {dos.map((d) => (
-                <li key={d} className="flex gap-2 text-sm text-brand-dark/80">
+                <li key={d} className="flex gap-2 text-sm text-brand-dark/80 dark:text-brand-light/70">
                   <Check className="w-4 h-4 text-brand-primary shrink-0" />
                   <span>&ldquo;{d}&rdquo;</span>
                 </li>
@@ -57,7 +57,7 @@ export function SectionPersonality() {
             <p className="font-semibold text-red-500 mb-3">Don&apos;ts</p>
             <ul className="space-y-2">
               {donts.map((d) => (
-                <li key={d} className="flex gap-2 text-sm text-brand-dark/80">
+                <li key={d} className="flex gap-2 text-sm text-brand-dark/80 dark:text-brand-light/70">
                   <X className="w-4 h-4 text-red-500 shrink-0" />
                   <span>&ldquo;{d}&rdquo;</span>
                 </li>
